@@ -7,9 +7,9 @@ from src.helper import get_pdf_text,Get_text_chunks,get_vector_store,get_convers
 def user_input(user_question):
     response = st.session_state.conversation({"question": user_question,})
     st.session_state.chatHistory = response['chat_history']
-    for in ,message in enumerate(st.session_state.chatHistory):
+    for i ,message in enumerate(st.session_state.chatHistory):
         if i % 2 == 0:
-            st.write("User", message.content))
+            st.write("User", message.content)
         else:
             st.write("Assistant", message.content,)
 
